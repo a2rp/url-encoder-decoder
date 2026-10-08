@@ -1,0 +1,38 @@
+﻿.header {
+    position: fixed;
+    z-index: 20;
+    inset: 0 0 auto;
+    height: 64px;
+    border-bottom: 1px solid #d8e2e8;
+    background: rgb(237 243 246 / 93%);
+    backdrop-filter: blur(14px);
+
+    .headerInner { display: flex; width: min(1240px, calc(100% - 48px)); height: 100%; align-items: center; justify-content: space-between; gap: 25px; margin: 0 auto; }
+    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 9px; color: #202b32; }
+    .brand > span:last-child { display: grid; line-height: 1.08; }
+    .brand strong { font-size: 13px; font-weight: 790; letter-spacing: -.035em; }
+    .brand small { margin-top: 4px; color: #77868e; font-size: 7px; font-weight: 800; letter-spacing: .12em; }
+    .brandMark { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid #8fd0ea; border-radius: 9px; color: #102832; background: #4eb4e3; }
+    .brandMark svg { width: 16px; height: 16px; }
+    .navigation { display: flex; align-items: center; gap: 25px; color: #6c7c84; font-size: 10px; font-weight: 690; }
+    .navigation a { transition: color 140ms ease; }
+    .navigation a:hover { color: #202b32; }
+    .repositoryLink { display: inline-flex; min-height: 34px; flex: 0 0 auto; align-items: center; justify-content: center; gap: 7px; padding: 0 11px; border: 1px solid #d2dfe5; border-radius: 7px; color: #202b32; background: #fff; font-size: 9px; font-weight: 750; transition: border-color 140ms ease, box-shadow 140ms ease; }
+    .repositoryLink:hover { border-color: #59afd4; box-shadow: 0 0 0 3px rgb(78 180 227 / 15%); }
+    .repositoryLink svg { width: 14px; height: 14px; }
+    .repositoryLink .externalIcon { width: 10px; height: 10px; color: #7a8b92; }
+
+    @media (max-width: 650px) {
+        .headerInner { width: calc(100% - 28px); gap: 10px; }
+        .navigation { gap: 12px; font-size: 9px; }
+        .navigation a:last-child { display: none; }
+        .repositoryLink { min-height: 32px; padding: 0 8px; gap: 5px; font-size: 8px; }
+    }
+
+    @media (max-width: 410px) {
+        .brand { gap: 6px; }
+        .brandMark { width: 29px; height: 29px; }
+        .navigation { gap: 8px; }
+        .repositoryLink .externalIcon { display: none; }
+    }
+}
