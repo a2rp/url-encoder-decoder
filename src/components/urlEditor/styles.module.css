@@ -1,0 +1,45 @@
+﻿.editor {
+    min-width: 0;
+    overflow: visible;
+    border: 1px solid #d8e2e8;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgb(24 45 56 / 5%);
+
+    .editorHeading { display: flex; min-height: 68px; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 15px 10px; }
+    .editorHeading > div:first-child { display: flex; align-items: center; gap: 9px; }
+    .number { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #cde5f0; border-radius: 8px; color: #317e9f; background: #eaf6fb; font-family: ui-monospace, Consolas, monospace; font-size: 9px; font-weight: 750; }
+    .editorHeading p { color: #79939f; font-size: 6px; font-weight: 800; letter-spacing: .12em; }
+    h3 { margin-top: 2px; color: #23313a; font-size: 12px; font-weight: 760; letter-spacing: -.02em; }
+    .formatBadge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; border: 1px solid #dbe8ee; border-radius: 5px; color: #5c747e; background: #f7fafc; font-size: 7px; font-weight: 700; white-space: nowrap; }
+    .formatBadge svg { width: 10px; height: 10px; }
+    .toolbar { display: flex; min-height: 39px; align-items: center; gap: 5px; padding: 5px 10px; border-block: 1px solid #e6edf0; background: #f7fafb; }
+    .toolbarButton, .clearButton { display: inline-flex; min-height: 26px; align-items: center; justify-content: center; gap: 5px; padding: 0 8px; border: 1px solid transparent; border-radius: 5px; color: #60747e; background: transparent; font-size: 8px; font-weight: 680; transition: border-color 140ms ease, box-shadow 140ms ease, color 140ms ease; }
+    .toolbarButton:hover:not(:disabled), .clearButton:hover:not(:disabled) { border-color: #cfe2ea; color: #263840; box-shadow: 0 1px 4px rgb(24 45 56 / 7%); }
+    .toolbarButton svg, .clearButton svg { width: 11px; height: 11px; }
+    .toolbarButton:disabled, .clearButton:disabled { opacity: .45; }
+    .sampleMenu { position: relative; }
+    .samplePanel { position: absolute; z-index: 8; top: calc(100% + 5px); left: 0; display: grid; width: 236px; gap: 3px; padding: 5px; border: 1px solid #d8e2e8; border-radius: 8px; background: #fff; box-shadow: 0 13px 28px rgb(21 42 52 / 15%); }
+    .samplePanel button { display: grid; gap: 3px; padding: 8px; border: 1px solid transparent; border-radius: 5px; text-align: left; background: transparent; }
+    .samplePanel button:hover { border-color: #d7e8ef; background: #f5fafc; }
+    .samplePanel strong { color: #283a44; font-size: 8px; font-weight: 750; }
+    .samplePanel small { color: #758790; font-size: 7px; line-height: 1.45; }
+    .clearButton { margin-left: auto; color: #9b5c58; }
+    .inputLabel { display: block; margin: 11px 13px 5px; color: #6c7d85; font-size: 8px; font-weight: 700; }
+    .sourceArea { display: block; width: calc(100% - 26px); min-height: 287px; margin: 0 13px 10px; padding: 12px; border: 1px solid #334852; border-radius: 8px; outline: 0; color: #e2f0f5; background: #14232c; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 10px; line-height: 1.8; overflow-wrap: anywhere; resize: vertical; transition: border-color 140ms ease, box-shadow 140ms ease; }
+    .sourceArea::placeholder { color: #7f939c; font-size: 9px; }
+    .sourceArea:focus { border-color: #53b4df; box-shadow: 0 0 0 3px rgb(78 180 227 / 18%); }
+    .editorFooter { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 13px 12px; }
+    .editorFooter p { color: #74858d; font-size: 7px; line-height: 1.45; }
+    .editorFooter span { flex: 0 0 auto; color: #87969d; font-family: ui-monospace, Consolas, monospace; font-size: 7px; }
+    .message { min-height: 0; color: #a64f49; font-size: 8px; }
+    .message:not(:empty) { margin: 0 13px 10px; }
+
+    @media (max-width: 600px) {
+        .editorHeading { padding-inline: 12px; }
+        .toolbar { padding-inline: 7px; }
+        .toolbarButton, .clearButton { padding-inline: 6px; font-size: 7px; }
+        .sourceArea { min-height: 235px; font-size: 9px; }
+        .editorFooter { align-items: flex-start; }
+    }
+}
