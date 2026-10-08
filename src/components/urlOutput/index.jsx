@@ -1,4 +1,4 @@
-﻿import { FiAlertCircle, FiCheck, FiClipboard, FiCode } from "react-icons/fi";
+import { FiAlertCircle, FiCheck, FiClipboard, FiCode } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const UrlOutput = ({ output, error, direction, mode, copied, onCopy }) => (
@@ -14,7 +14,7 @@ const UrlOutput = ({ output, error, direction, mode, copied, onCopy }) => (
         </div>
         <div className={styles.outputFooter}>
             <p>{output ? `${output.length.toLocaleString()} characters` : mode === "query" ? "Query pairs preserve order and duplicates" : "Live transformation"}</p>
-            <button type="button" onClick={onCopy} disabled={!output || Boolean(error)}><FiClipboard aria-hidden="true" /> {copied ? "Copied" : "Copy output"}<FiCheck aria-hidden="true" className={styles.copiedIcon} /></button>
+            <button type="button" onClick={onCopy} disabled={!output || Boolean(error)}>{copied ? <FiCheck aria-hidden="true" /> : <FiClipboard aria-hidden="true" />} {copied ? "Copied" : "Copy output"}</button>
         </div>
     </section>
 );
