@@ -1,0 +1,46 @@
+﻿.output {
+    display: flex;
+    min-width: 0;
+    min-height: 390px;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #344c58;
+    border-radius: 12px;
+    color: #edf7fa;
+    background: #14232c;
+    box-shadow: 0 12px 30px rgb(21 47 59 / 12%);
+
+    .outputHeading { display: flex; min-height: 62px; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid #334852; background: #1b2d37; }
+    .outputHeading > div:first-child { display: flex; align-items: center; gap: 9px; }
+    .number { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #385f70; border-radius: 8px; color: #88cce6; background: #233d49; font-family: ui-monospace, Consolas, monospace; font-size: 9px; font-weight: 750; }
+    .outputHeading p { color: #83a5b1; font-size: 6px; font-weight: 800; letter-spacing: .12em; }
+    h3 { margin-top: 2px; color: #f2f8fa; font-size: 12px; font-weight: 760; letter-spacing: -.02em; }
+    .status { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; border: 1px solid #40515a; border-radius: 30px; font-size: 7px; font-weight: 700; white-space: nowrap; }
+    .status i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+    .ready { color: #87d1b2; background: #203a35; }
+    .idle { color: #aabcc3; background: #283840; }
+    .error { color: #ffaca0; background: #422e31; }
+    .outputArea { display: flex; min-height: 280px; flex: 1; }
+    textarea { width: 100%; min-height: 280px; padding: 17px; border: 0; outline: 0; color: #d4eff9; background: transparent; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 10px; line-height: 1.85; overflow-wrap: anywhere; resize: vertical; }
+    .hasError { align-items: center; justify-content: center; padding: 20px; }
+    .errorPanel, .emptyOutput { display: grid; max-width: 270px; justify-items: center; gap: 7px; text-align: center; }
+    .errorPanel > span, .emptyOutput > span { display: grid; width: 38px; height: 38px; place-items: center; margin-bottom: 3px; border: 1px solid #405560; border-radius: 11px; color: #7dc7e3; background: #233b47; }
+    .errorPanel > span { border-color: #714648; color: #ff9e94; background: #402e33; }
+    .errorPanel svg, .emptyOutput svg { width: 15px; height: 15px; }
+    .errorPanel strong, .emptyOutput strong { color: #e8f1f4; font-size: 9px; font-weight: 750; }
+    .errorPanel p, .emptyOutput p { color: #a9bac1; font-size: 8px; line-height: 1.55; }
+    .outputFooter { display: flex; min-height: 39px; align-items: center; justify-content: space-between; gap: 8px; padding: 5px 12px; border-top: 1px solid #334852; color: #8fa7b1; background: #192a34; }
+    .outputFooter p { font-size: 7px; }
+    .outputFooter button { display: inline-flex; min-height: 26px; align-items: center; gap: 5px; padding: 0 8px; border: 1px solid #44606d; border-radius: 5px; color: #d4e9f0; background: #263c47; font-size: 7px; font-weight: 700; transition: border-color 140ms ease, box-shadow 140ms ease; }
+    .outputFooter button:hover:not(:disabled) { border-color: #59b5df; box-shadow: 0 0 0 3px rgb(78 180 227 / 15%); }
+    .outputFooter button:disabled { opacity: .43; }
+    .outputFooter svg { width: 10px; height: 10px; }
+    .copiedIcon { display: none; }
+    .outputFooter button:active .copiedIcon { display: block; }
+
+    @media (max-width: 700px) {
+        min-height: 340px;
+        .outputArea, textarea { min-height: 235px; }
+        textarea { padding: 14px; font-size: 9px; }
+    }
+}
