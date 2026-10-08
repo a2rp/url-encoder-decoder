@@ -1,1 +1,67 @@
-﻿.appShell { min-height: 100vh; }
+﻿.appShell {
+    min-height: 100vh;
+    padding-top: 64px;
+    overflow: clip;
+
+    .hero { padding: 42px 24px 0; border-bottom: 1px solid #d8e2e8; background: linear-gradient(115deg, #f8fbfc 0%, #eef5f8 63%, #e4f1f7 100%); }
+    .heroInner { display: grid; max-width: 1240px; min-height: 250px; grid-template-columns: 1fr .76fr; align-items: center; gap: 60px; margin: 0 auto; }
+    .heroCopy { max-width: 650px; padding-bottom: 13px; }
+    .heroLabel { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; color: #337f9f; font-size: 8px; font-weight: 810; letter-spacing: .13em; text-transform: uppercase; }
+    .heroLabel svg { width: 12px; height: 12px; }
+    h1 { color: #202b32; font-size: clamp(38px, 5.2vw, 59px); font-weight: 790; letter-spacing: -.065em; line-height: 1; }
+    h1 span { color: #2787b1; }
+    .heroDescription { max-width: 510px; margin-top: 14px; color: #74848c; font-size: 10px; line-height: 1.75; }
+    .heroLink { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; color: #246d8d; font-size: 9px; font-weight: 780; }
+    .heroLink svg { width: 12px; height: 12px; }
+    .heroLink:hover { color: #164d67; }
+    .privacyNote { display: flex; align-items: center; gap: 5px; margin-top: 11px; color: #7e8d94; font-size: 7px; }
+    .privacyNote svg { width: 10px; height: 10px; color: #378675; }
+    .protocolCard { justify-self: end; width: min(100%, 420px); overflow: hidden; border: 1px solid #38515e; border-radius: 11px; color: #edf7fa; background: #14232c; box-shadow: 0 18px 45px rgb(21 47 59 / 15%); }
+    .protocolHeader { display: flex; min-height: 37px; align-items: center; justify-content: space-between; padding: 0 11px; border-bottom: 1px solid #344a56; color: #9bb4be; background: #1b2d37; font-family: ui-monospace, Consolas, monospace; font-size: 7px; }
+    .protocolHeader > span:nth-child(2) { display: inline-flex; align-items: center; gap: 5px; }
+    .protocolHeader > span:nth-child(2) svg { width: 10px; height: 10px; color: #68c0e5; }
+    .protocolHeader > b { padding: 3px 5px; border: 1px solid #376b60; border-radius: 4px; color: #8fd4b5; background: #233b35; font-size: 7px; }
+    .windowDots { display: flex; gap: 4px; }
+    .windowDots i { width: 6px; height: 6px; border-radius: 50%; background: #738c94; }
+    .windowDots i:first-child { background: #d27970; }
+    .windowDots i:nth-child(2) { background: #dcbb71; }
+    .windowDots i:nth-child(3) { background: #73ba9b; }
+    .requestRow { display: grid; grid-template-columns: 31px 1fr; align-items: start; gap: 9px; padding: 21px 13px 18px; }
+    .requestRow > span { padding: 3px 4px; border-radius: 4px; color: #8fd4b5; background: #263c36; text-align: center; font-family: ui-monospace, Consolas, monospace; font-size: 6px; font-weight: 800; }
+    .requestRow code { color: #e2f2f8; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 9px; line-height: 1.8; overflow-wrap: anywhere; }
+    .requestRow code span { color: #8ccde5; }
+    .ruleRow { display: flex; justify-content: space-between; gap: 8px; padding: 10px 13px; border-top: 1px solid #344a56; color: #9eb1b8; background: #192a33; font-size: 7px; }
+    .ruleRow span { display: inline-flex; align-items: center; gap: 5px; }
+    .ruleRow i { width: 5px; height: 5px; border-radius: 50%; background: #67c0a3; }
+    .ruleRow span:last-child i { background: #64bde4; }
+    .protocolFooter { display: flex; min-height: 33px; align-items: center; gap: 9px; padding: 0 12px; border-top: 1px solid #334651; color: #8fa5ad; font-size: 6px; font-weight: 750; letter-spacing: .08em; }
+    .protocolFooter svg { width: 11px; height: 11px; color: #6dbddd; }
+    .protocolFooter span:last-child { margin-left: auto; }
+    .heroRail { display: flex; max-width: 1240px; min-height: 32px; align-items: center; gap: 9px; margin: 21px auto 0; border-top: 1px solid #d9e5e9; color: #809199; font-size: 6px; font-weight: 760; letter-spacing: .12em; }
+    .heroRail i { width: 3px; height: 3px; border-radius: 50%; background: #419fc1; }
+    .formats { padding: 34px max(24px, calc((100vw - 1240px) / 2)) 49px; border-top: 1px solid #e0e8ec; background: #f7fafb; scroll-margin-top: 76px; }
+    .formatsHeading p { margin-bottom: 4px; color: #347d9c; font-size: 7px; font-weight: 810; letter-spacing: .13em; text-transform: uppercase; }
+    .formatsHeading h2 { color: #26333b; font-size: clamp(19px, 2.5vw, 24px); font-weight: 780; letter-spacing: -.045em; }
+    .formatsHeading > span { display: block; margin-top: 4px; color: #78878e; font-size: 8px; }
+    .formatCards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+    .formatCards article { display: grid; grid-template-columns: 29px 1fr; align-items: start; gap: 9px; padding: 13px; border: 1px solid #dce6eb; border-radius: 8px; background: #fff; }
+    .formatCards article > span { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid #cde5ef; border-radius: 8px; color: #317e9f; background: #eaf6fb; }
+    .formatCards article > span svg { width: 13px; height: 13px; }
+    .formatCards h3 { color: #2a3a42; font-size: 9px; font-weight: 760; }
+    .formatCards p { margin-top: 5px; color: #77868e; font-size: 7px; line-height: 1.6; }
+    .formatCards code { display: block; overflow: hidden; margin-top: 7px; color: #347f9f; font-family: ui-monospace, Consolas, monospace; font-size: 6px; text-overflow: ellipsis; white-space: nowrap; }
+
+    @media (max-width: 900px) {
+        .heroInner { grid-template-columns: 1fr .85fr; gap: 27px; }
+        .formatCards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 650px) {
+        .hero { padding: 31px 14px 0; }
+        .heroInner { grid-template-columns: 1fr; gap: 20px; }
+        .heroCopy { padding-bottom: 0; }
+        .protocolCard { width: 100%; }
+        h1 { font-size: clamp(38px, 10.5vw, 50px); }
+        .heroRail { justify-content: space-between; gap: 5px; margin-top: 17px; font-size: 5px; letter-spacing: .08em; }
+        .formats { padding: 30px 14px 39px; }
+    }
+}
