@@ -1,0 +1,48 @@
+﻿.workbench {
+    width: min(1240px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 31px 0 48px;
+    scroll-margin-top: 78px;
+
+    .workbenchHeading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .sectionLabel { margin-bottom: 3px; color: #347f9f; font-size: 7px; font-weight: 810; letter-spacing: .14em; text-transform: uppercase; }
+    h2 { color: #23313a; font-size: clamp(20px, 2.8vw, 26px); font-weight: 790; letter-spacing: -.05em; line-height: 1.12; }
+    .workbenchHeading > div:first-child > span { display: block; margin-top: 5px; color: #77868e; font-size: 9px; }
+    .localBadge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border: 1px solid #d8e2e8; border-radius: 30px; color: #5c747d; background: #fff; font-size: 8px; font-weight: 700; white-space: nowrap; }
+    .localBadge svg { width: 11px; height: 11px; color: #348775; }
+    .controlBar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 10px; border: 1px solid #d6e1e7; border-radius: 9px; background: #e5edf1; }
+    .formatGroup, .directionGroup { display: inline-flex; align-items: center; gap: 3px; }
+    .formatGroup button, .directionGroup button { display: inline-flex; min-height: 31px; align-items: center; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid transparent; border-radius: 6px; color: #687c86; background: transparent; font-size: 8px; font-weight: 700; transition: border-color 140ms ease, box-shadow 140ms ease, color 140ms ease; }
+    .formatGroup button:hover, .directionGroup button:hover { color: #283942; }
+    .formatGroup button.activeFormat { border-color: #d2e4eb; color: #286c8b; background: #fff; box-shadow: 0 1px 4px rgb(21 47 59 / 8%); }
+    .directionGroup { padding: 3px; border: 1px solid #d3e0e6; border-radius: 7px; background: #f6f9fa; }
+    .directionGroup button { min-height: 27px; padding-inline: 9px; }
+    .directionGroup button.activeDirection { border-color: #a9d9eb; color: #17485e; background: #dff4fb; }
+    .directionGroup svg { width: 11px; height: 11px; }
+    .formatDescription { min-height: 23px; padding: 6px 2px; color: #71818a; font-size: 8px; }
+    .workspaceGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .93fr); align-items: stretch; gap: 12px; }
+    .workbenchFoot { display: flex; align-items: center; gap: 7px; margin-top: 9px; color: #7d8b92; font-size: 7px; }
+    .workbenchFoot svg { width: 11px; height: 11px; flex: 0 0 auto; color: #348775; }
+    .workbenchFoot small { margin-left: auto; color: #6a7b83; font-family: ui-monospace, Consolas, monospace; font-size: 7px; }
+    .notice { position: fixed; z-index: 30; right: 22px; bottom: 22px; max-width: min(350px, calc(100vw - 44px)); padding: 9px 12px; border: 1px solid #405864; border-radius: 7px; color: #edf7fa; background: #203742; box-shadow: 0 7px 20px rgb(21 47 59 / 18%); font-size: 8px; }
+
+    @media (max-width: 920px) {
+        .workspaceGrid { grid-template-columns: minmax(0, 1fr); }
+    }
+
+    @media (max-width: 700px) {
+        width: calc(100% - 28px);
+        padding: 24px 0 37px;
+        .workbenchHeading { align-items: flex-start; }
+        .controlBar { align-items: flex-start; flex-direction: column; padding: 7px; }
+        .formatGroup { width: 100%; }
+        .formatGroup button { flex: 1; padding-inline: 5px; font-size: 7px; }
+        .directionGroup { width: 100%; }
+        .directionGroup button { flex: 1; }
+    }
+
+    @media (max-width: 390px) {
+        width: calc(100% - 22px);
+        .localBadge { padding: 5px 6px; font-size: 7px; }
+    }
+}
