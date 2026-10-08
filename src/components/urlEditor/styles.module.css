@@ -14,7 +14,7 @@
     .formatBadge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; border: 1px solid #dbe8ee; border-radius: 5px; color: #5c747e; background: #f7fafc; font-size: 7px; font-weight: 700; white-space: nowrap; }
     .formatBadge svg { width: 10px; height: 10px; }
     .toolbar { display: flex; min-height: 39px; align-items: center; gap: 5px; padding: 5px 10px; border-block: 1px solid #e6edf0; background: #f7fafb; }
-    .toolbarButton, .clearButton { display: inline-flex; min-height: 26px; align-items: center; justify-content: center; gap: 5px; padding: 0 8px; border: 1px solid transparent; border-radius: 5px; color: #60747e; background: transparent; font-size: 8px; font-weight: 680; transition: border-color 140ms ease, box-shadow 140ms ease, color 140ms ease; }
+    .toolbarButton, .clearButton { display: inline-flex; min-height: 26px; align-items: center; justify-content: center; gap: 5px; padding: 0 8px; border: 1px solid transparent; border-radius: 5px; color: #60747e; background: transparent; font-size: 8px; font-weight: 680; transition: border-color 140ms ease, box-shadow 140ms ease; }
     .toolbarButton:hover:not(:disabled), .clearButton:hover:not(:disabled) { border-color: #cfe2ea; color: #263840; box-shadow: 0 1px 4px rgb(24 45 56 / 7%); }
     .toolbarButton svg, .clearButton svg { width: 11px; height: 11px; }
     .toolbarButton:disabled, .clearButton:disabled { opacity: .45; }

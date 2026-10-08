@@ -12,7 +12,7 @@
     .localBadge svg { width: 11px; height: 11px; color: #348775; }
     .controlBar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 10px; border: 1px solid #d6e1e7; border-radius: 9px; background: #e5edf1; }
     .formatGroup, .directionGroup { display: inline-flex; align-items: center; gap: 3px; }
-    .formatGroup button, .directionGroup button { display: inline-flex; min-height: 31px; align-items: center; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid transparent; border-radius: 6px; color: #687c86; background: transparent; font-size: 8px; font-weight: 700; transition: border-color 140ms ease, box-shadow 140ms ease, color 140ms ease; }
+    .formatGroup button, .directionGroup button { display: inline-flex; min-height: 31px; align-items: center; justify-content: center; gap: 5px; padding: 0 10px; border: 1px solid transparent; border-radius: 6px; color: #687c86; background: transparent; font-size: 8px; font-weight: 700; transition: border-color 140ms ease, box-shadow 140ms ease; }
     .formatGroup button:hover, .directionGroup button:hover { color: #283942; }
     .formatGroup button.activeFormat { border-color: #d2e4eb; color: #286c8b; background: #fff; box-shadow: 0 1px 4px rgb(21 47 59 / 8%); }
     .directionGroup { padding: 3px; border: 1px solid #d3e0e6; border-radius: 7px; background: #f6f9fa; }
